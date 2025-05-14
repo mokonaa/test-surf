@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test d'intégration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="navbar__ul navbar__desktop">
+            <li class="navbar__li hide-mobile">Link 1</li>
+            <li class="navbar__li hide-mobile">Link 2</li>
+            <li class="navbar__li hide-mobile">Link 3</li>
+        </ul>
+        <ul class="navbar__ul"> 
+            <li class="navbar__logo">
+                <img src="img/logo.svg" alt="logo">
+            </li>
+            <li class="navbar__cta">
+                <a class="navbar__cta-link" href="">
+                    Get started
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section class="accueil">
+            <h1 class="accueil__titre">
+                Headline that highlights the Value Proposition
+            </h1>
+            <h2 class="accueil__description">
+                Describe exactly what your product or service does and how it makes your customer's lives better. Avoid
+                using verbose words or phrases.
+            </h2>
+            <div class="accueil__cta-wrapper">
+                <div class="accueil__cta accueil__cta--noir">
+                    Get started
+                </div>
+                <div class="accueil__cta accueil__cta--blanc">
+                    Learn more
+                </div>
+            </div>
+            <div class="accueil__img">
+                <picture>
+                    <source srcset="img/img_desk.png" media="(min-width: 1023px)" />
+                    <img src="img/img_mob.jpg" alt="" />
+                </picture>
+            </div>
+        </section>
+        <section class="feature__wrapper">
+            <div class="feature">
+                <div class="feature__texte">
+                    <h2 class="feature__titre">
+                        Describe feature one
+                    </h2>
+                    <p class="feature__paragraphe">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+                        elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo
+                        diam libero vitae erat.
+                    </p>
+                    <ul class="feature__liste">
+                        <li class="feature__li">
+                            Benefit one of this feature
+                        </li>
+                        <li class="feature__li">
+                            Benefit two of this feature
+                        </li>
+                        <li class="feature__li">
+                            Benefit three of this feature
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature__img">
+                    <picture>
+                        <source srcset="img/feature_desk.png" media="(min-width: 1023px)" />
+                        <img src="img/feature_mob.png" alt="" />
+                    </picture>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature__texte">
+                    <h2 class="feature__titre">
+                        Describe feature two
+                    </h2>
+                    <p class="feature__paragraphe">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+                        elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo
+                        diam libero vitae erat.
+                    </p>
+                    <ul class="feature__liste">
+                        <li class="feature__li">
+                            Benefit one of this feature
+                        </li>
+                        <li class="feature__li">
+                            Benefit two of this feature
+                        </li>
+                        <li class="feature__li">
+                            Benefit three of this feature
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature__img">
+                    <picture>
+                        <source srcset="img/feature_desk.png" media="(min-width: 1023px)" />
+                        <img src="img/feature_mob.png" alt="" />
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <section class="customers">
+            <h3 class="customers__sous-titre">
+                Customers
+            </h3>
+            <h2 class="customers__titre">
+                Short headline about who the product or service is for
+            </h2>
+            <div class="customers__wrapper-element">
+                <div class="customers__element">
+                    <div class="customers__img">
+                        <picture>
+                            <source srcset="img/customers_desk.png" media="(min-width: 1023px)" />
+                            <img src="img/customers_mob.png" alt="" />
+                        </picture>
+                    </div>
+                    <h4 class="customers__element-titre">
+                        Customer group one
+                    </h4>
+                    <p class="customers__element-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+                        elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.
+                    </p>
+                </div>
+                <div class="customers__element">
+                    <div class="customers__img">
+                        <picture>
+                            <source srcset="img/customers_desk.png" media="(min-width: 1023px)" />
+                            <img src="img/customers_mob.png" alt="" />
+                        </picture>
+                    </div>
+                    <h4 class="customers__element-titre">
+                        Customer group one
+                    </h4>
+                    <p class="customers__element-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+                        elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.
+                    </p>
+                </div>
+                <div class="customers__element">
+                    <div class="customers__img">
+                        <picture>
+                            <source srcset="img/customers_desk.png" media="(min-width: 1023px)" />
+                            <img src="img/customers_mob.png" alt="" />
+                        </picture>
+                    </div>
+                    <h4 class="customers__element-titre">
+                        Customer group one
+                    </h4>
+                    <p class="customers__element-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+                        elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer__logo">
+                <img src="img/logo.svg" alt="logo">
+            </div>
+            <ul class="footer__column">
+                <li class="footer__header-li">Column One</li>
+                <li class="footer__li">Link 1</li>
+                <li class="footer__li">Link 2</li>
+                <li class="footer__li">Link 3</li>
+                <li class="footer__li">Link 4</li>
+                <li class="footer__li">Link 5</li>
+            </ul>
+            <ul class="footer__column">
+                <li class="footer__header-li">Column Two</li>
+                <li class="footer__li">Link 6</li>
+                <li class="footer__li">Link 7</li>
+                <li class="footer__li">Link 8</li>
+                <li class="footer__li">Link 9</li>
+                <li class="footer__li">Link 10</li>
+            </ul>
+            <ul class="footer__column">
+                <li class="footer__header-li">Column Three</li>
+                <li class="footer__li">Link 11</li>
+                <li class="footer__li">Link 12</li>
+                <li class="footer__li">Link 13</li>
+                <li class="footer__li">Link 14</li>
+                <li class="footer__li">Link 15</li>
+            </ul>
+            <ul class="footer__column">
+                <li class="footer__header-li">Column Four</li>
+                <li class="footer__li">Link 16</li>
+                <li class="footer__li">Link 17</li>
+                <li class="footer__li">Link 18</li>
+                <li class="footer__li">Link 19</li>
+                <li class="footer__li">Link 20</li>
+            </ul>
+            <ul class="footer__column">
+                <li class="footer__header-li">Column Five</li>
+                <li class="footer__li">Link 21</li>
+                <li class="footer__li">Link 22</li>
+                <li class="footer__li">Link 23</li>
+                <li class="footer__li">Link 24</li>
+                <li class="footer__li">Link 25</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

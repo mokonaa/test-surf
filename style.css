@@ -1,0 +1,292 @@
+/* 
+
+Méthodologie BEM :
+Pour structurer mon code, j’ai choisi d’utiliser la méthodologie BEM, qui permet d’organiser les éléments de manière 
+claire et cohérente. C’est une approche que je trouve très utile pour garder un code lisible, aussi bien pour moi que 
+pour d’autres développeurs, mais aussi plus réutilisable et facile à faire évoluer sur des projets plus complexes.
+
+J’aurais aimé utiliser du SCSS/SASS, qui fonctionne très bien avec BEM grâce à l’imbrication, ce qui rend le code 
+encore plus lisible et modulaire. Par exemple :
+
+.accueil {
+    &__titre {
+        font-size: 40px;
+        margin-bottom: 20px;
+        padding-inline: 1rem;
+    }
+    &__description {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+    }
+}
+
+Mais comme la mise en place de SCSS prend un peu de temps, j’ai préféré me concentrer sur l’essentiel et utiliser du
+CSS pur pour ce test.
+
+Responsive mobile-first : 
+Côté responsive, je travaille toujours en mobile first. Je commence systématiquement par le format mobile, puis 
+j’ajuste ensuite pour les écrans plus larges. C’est une approche que je trouve plus simple et plus efficace, 
+notamment pour la gestion des media queries. Ça permet aussi de bien poser les bases, d’optimiser le contenu
+important dès le départ, et de garder une structure plus légère.
+
+*/
+
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* classe utilitaire lors du responsive */
+@media screen and (max-width: 1023px) {
+    .hide-mobile {
+        display: none;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .hide-mobile {
+        display: block !important;
+    }
+}
+
+/* Navbar */
+.navbar {
+    position: relative;
+    padding-block: 1rem;
+    border-bottom: 1px solid #000;
+}
+
+.navbar__ul {
+    position: relative;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+.navbar__logo {
+    height: 36px;
+    width: 84px;
+}
+.navbar__cta {
+    position: absolute;
+    right: 1rem;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    margin-left: .5rem;
+}
+.navbar__cta-link {
+    text-decoration: none;
+    color: #fff;
+}
+/* Padding inline sur mobile pour les 4 sections */
+.accueil, .feature, .customers, .footer {
+    padding-inline: 20px;
+}
+/* Hero section */
+.accueil {
+    padding-block: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.accueil__titre {
+    font-size: 40px;
+    margin-bottom: 20px;
+    padding-inline: 1rem;
+}
+.accueil__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}
+.accueil__cta-wrapper {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 48px;
+}
+.accueil__cta {
+    border: 1px solid #000;
+    padding: 12px 24px;
+}
+.accueil__cta--noir {
+    background-color: black;
+    color: white;
+}
+
+.accueil__img, .feature__img, .customers__img {
+    width: 100%;
+    height: 100%;
+}
+.accueil__img img, .feature__img img, .customers__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Les blocs feature */
+.feature {
+    margin-bottom: 128px;
+}
+.feature__texte {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.feature__titre {
+    font-size: 36px;
+    font-weight: 700;
+}
+.feature__paragraphe {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+.feature__liste {
+    list-style-position: inside;
+}
+.feature__li {
+    margin-bottom: 1rem;
+}
+/* Le bloc customers */
+.customers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 112px;
+}
+.customers__element:not(:last-child) {
+    margin-bottom: 40px;
+}
+.customers__sous-titre {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.customers__titre {
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 48px;
+}
+.customers__img {
+    margin-bottom: 24px;
+}
+.customers__element-titre {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.customers__element-description {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+/* Footer */
+.footer {
+    padding-block: 24px;
+}
+.footer__logo {
+    width: 70px;
+    height: 36px;
+    margin-bottom: 40px;
+}
+.footer__column {
+    list-style-type: none;
+}
+.footer__column:not(:last-child) {
+    margin-bottom: 40px;
+}
+.footer__header-li {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+.footer__li {
+    padding-block: .5rem;
+    font-size: 14px;
+}
+
+/* Responsive desktop */
+
+@media screen and (min-width: 1024px) {
+    .accueil, .feature, .customers, .footer {
+        padding-inline: 40px;
+    }
+    .navbar__desktop {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 64px;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        height: 100%;
+    }
+    .navbar__logo {
+        right: 64px;
+    }
+    .accueil__titre {
+        margin-top: 112px;
+        width: 768px;
+        font-size: 56px;
+        padding-inline: 0;
+    }
+    .accueil__description {
+        font-size: 18px;
+        width: 768px;
+    }
+    .accueil__cta-wrapper {
+        margin-bottom: 80px;
+    }
+    .accueil__img {
+        height: 738px !important;
+    }
+    .feature {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+    }
+    .feature__texte, .feature__img {
+        width: 50%;
+    }
+    .feature__paragraphe {
+        width: 85%;
+    }
+    .feature__img {
+        height: 640px;
+        width: 616px;
+    }
+    .feature:last-child {
+        flex-direction: row-reverse;
+    }
+    .customers__wrapper-element {
+        display: flex;
+        gap: 48px;
+    }
+    .customers__element {
+        width: calc(100%/3);
+    }
+    .customers__img {
+        height: 240px;
+        margin-bottom: 32px;
+    }
+    .footer {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding-inline: 0;
+    }
+    .footer__logo {
+        padding-left: 40px;
+    }
+    .footer__column:last-child {
+        padding-right: 40px;
+    }
+}
